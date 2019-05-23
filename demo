@@ -1,0 +1,24 @@
+
+set the Desired Div Id You want to Print 
+
+
+By using some button to Call a Function 
+
+for Example  :
+		
+			I use id as 'table' and make a new document window to print .
+
+
+<script>
+        
+        function printContent(){
+            var printme = document.getElementById('table');
+            var wme = window.open( "","","width=900,height=700");
+            wme.document.write(printme.outerHTML);
+            wme.document.close();
+            wme.focus();
+            wme.print();
+            wme.close();
+        }
+    
+</script>
